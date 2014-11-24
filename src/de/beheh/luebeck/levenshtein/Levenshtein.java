@@ -18,10 +18,10 @@ public class Levenshtein {
 		d[0][0] = 0; // keine Kosten bei lambda=lambda
 		// triviale Bildung der Worte aus leeren Wörtern per insert
 		for (int i = 1; i <= s.length(); i++) {
-			d[i][0] = c1;
+			d[i][0] = i * c1;
 		}
 		for (int i = 1; i <= t.length(); i++) {
-			d[0][i] = c1;
+			d[0][i] = i * c1;
 		}
 
 		// für jeden Buchstaben des Strings s
